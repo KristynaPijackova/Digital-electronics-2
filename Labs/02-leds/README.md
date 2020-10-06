@@ -17,12 +17,11 @@ Draw the basic ways to connect a push button to the microcontroller input pin: b
 
 [Calculate LED resistor value](https://electronicsclub.info/leds.htm) for typical red and blue LEDs.
 
-![Clock period](../../Images/ohms_law.PNG)
 
 | **LED color** | **Supply voltage** | **LED current** | **LED voltage** | **Resistor value** |
 | :-: | :-: | :-: | :-: | :-: |
-| red | 5&nbsp;V | 20&nbsp;mA | 2 | 150 Ω |
-| blue | 5&nbsp;V | 20&nbsp;mA | 4 | 50 Ω|
+| red | 5&nbsp;V | 20&nbsp;mA | 2.0 | 150 Ω |
+| blue | 5&nbsp;V | 20&nbsp;mA | 3.2 | 90 Ω|
 
 
 
@@ -44,8 +43,8 @@ Use the datasheet to find out the meaning of the DDRB and PORTB control register
 
 | **PORTB** | **Description** |
 | :-: | :-- |
-| 0 | Output low value |
-| 1 | Output high value |
+| 0 | Output Low  |
+| 1 | Output High |
 
 | **DDRB** | **PORTB** | **Direction** | **Internal pull-up resistor** | **Description** |
 | :-: | :-: | :-: | :-: | :-- |
@@ -59,30 +58,30 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 | **Port** | **Pin** | **Input/output usage?** |
 | :-: | :-: | :-- |
 | A | x | Microcontroller ATmega328P does not contain port A |
-| B | 0 | Yes (Arduino pin 8) |
-|   | 1 | Yes (Arduino pin -9) |
-|   | 2 | Yes (Arduino pin -10)|
-|   | 3 | Yes (Arduino pin -11)|
-|   | 4 | Yes (Arduino pin 12) |
-|   | 5 | Yes (Arduino pin 13) LED L|
-|   | 6 | not available as I/O pin |
-|   | 7 | not available as I/O pin |
-| C | 0 | Yes (Arduino pin A0) |
-|   | 1 | Yes (Arduino pin A1)  |
-|   | 2 | Yes (Arduino pin A2)  |
-|   | 3 | Yes (Arduino pin A3)  |
-|   | 4 | No (Arduino pin A4)  |
-|   | 5 | Yes (Arduino pin A5)  |
-|   | 6 | not available as I/O pin|
-|   | 7 | not available as I/O pin|
-| D | 0 | Yes (Arduino pin RX<-0) |
-|   | 1 | Yes (Arduino pin TX<-0) |
-|   | 2 | Yes (Arduino pin 2)  |
-|   | 3 | Yes (Arduino pin -3)|
-|   | 4 | Yes (Arduino pin 4) |
-|   | 5 | Yes (Arduino pin -5)|
-|   | 6 | Yes (Arduino pin -6)|
-|   | 7 | Yes (Arduino pin 7) |
+| B | 0 | Yes (pin 8) |
+|   | 1 | Yes (pin -9) |
+|   | 2 | Yes (pin -10)|
+|   | 3 | Yes (pin -11)|
+|   | 4 | Yes (pin 12) |
+|   | 5 | Yes (pin 13) LED L|
+|   | 6 | No |
+|   | 7 | No |
+| C | 0 | Yes (pin A0) |
+|   | 1 | Yes (pin A1)  |
+|   | 2 | Yes (pin A2)  |
+|   | 3 | Yes (pin A3)  |
+|   | 4 | No (pin A4)  |
+|   | 5 | Yes (pin A5)  |
+|   | 6 | No |
+|   | 7 | No |
+| D | 0 | Yes (pin RX 0) |
+|   | 1 | Yes (pin TX 0) |
+|   | 2 | Yes (pin 2)  |
+|   | 3 | Yes (pin -3)|
+|   | 4 | Yes (pin 4) |
+|   | 5 | Yes (pin -5)|
+|   | 6 | Yes (pin -6)|
+|   | 7 | Yes (pin 7) |
 
 SimulIDE
 
