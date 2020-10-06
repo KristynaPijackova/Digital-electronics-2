@@ -8,13 +8,10 @@ The purpose of this laboratory exercise is to learn how to use basic input/outpu
 
 Draw two basic ways to connect a LED to the output pin of the microcontroller: LED active-low, LED active-high. What is the name of the LED pin that is connected to the microcontroller in each case?
 
-Diode active high:
+Draw the basic ways to connect a push button to the microcontroller input pin: button active-low, button active-high.
+&nbsp;
 
-![logic](../../Images/DiodeActiveHigh.PNG)
-
-Diode active low:
-
-![logic](../../Images/DiodeActiveLow.PNG)
+(../../IMG/2_leds.png)
 
 
 
@@ -29,16 +26,9 @@ Diode active low:
 
 
 
-Draw the basic ways to connect a push button to the microcontroller input pin: button active-low, button active-high.
-&nbsp;
 
-Button active high:
 
-![logic](../../Images/PushActiveHigh.PNG)
 
-Button active low:
-
-![logic](../../Images/PushActiveLow.PNG)
 
 
 
@@ -93,3 +83,8 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 |   | 5 | Yes (Arduino pin -5)|
 |   | 6 | Yes (Arduino pin -6)|
 |   | 7 | Yes (Arduino pin 7) |
+
+SimulIDE
+
+(../../IMG/photo_2020-10-06_12-05-58.jpg)
+
