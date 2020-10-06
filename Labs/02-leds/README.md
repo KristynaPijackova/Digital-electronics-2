@@ -64,16 +64,16 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 |   | 3 | Yes (pin -11)|
 |   | 4 | Yes (pin 12) |
 |   | 5 | Yes (pin 13) LED L|
-|   | 6 | No |
-|   | 7 | No |
+|   | 6 | NA |
+|   | 7 | NA |
 | C | 0 | Yes (pin A0) |
 |   | 1 | Yes (pin A1)  |
 |   | 2 | Yes (pin A2)  |
 |   | 3 | Yes (pin A3)  |
 |   | 4 | No (pin A4)  |
 |   | 5 | Yes (pin A5)  |
-|   | 6 | No |
-|   | 7 | No |
+|   | 6 | NA |
+|   | 7 | NA |
 | D | 0 | Yes (pin RX 0) |
 |   | 1 | Yes (pin TX 0) |
 |   | 2 | Yes (pin 2)  |
