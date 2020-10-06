@@ -83,7 +83,4 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 |   | 6 | Yes (pin -6)|
 |   | 7 | Yes (pin 7) |
 
-SimulIDE
-
-(Digital-electronics-2/Labs/02-leds/IMG/photo_2020-10-06_12-05-58.jpg)
 
