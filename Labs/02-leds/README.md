@@ -53,7 +53,7 @@ Use the datasheet to find out the meaning of the DDRB and PORTB control register
 | 1 | 0 | output | no | Output low (sink) |
 | 1 | 1 | output | no | Output high (source) |
 
-See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs folder of Digital-electronics-2 repository and find out which pins of ATmega328P can be used as input/output pins. To which pin is the LED L connected? (PB5) Is it connected as active-low or active-high?(Active high)
+See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs folder of Digital-electronics-2 repository and find out which pins of ATmega328P can be used as input/output pins. To which pin is the LED L connected? (PB5 / pin 13 on arduino) Is it connected as active-low or active-high?(active-high)
 
 | **Port** | **Pin** | **Input/output usage?** |
 | :-: | :-: | :-- |
@@ -63,7 +63,7 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 |   | 2 | Yes (pin -10)|
 |   | 3 | Yes (pin -11)|
 |   | 4 | Yes (pin 12) |
-|   | 5 | Yes (pin 13) LED L|
+|   | 5 | Yes (pin 13) |
 |   | 6 | NA |
 |   | 7 | NA |
 | C | 0 | Yes (pin A0) |
