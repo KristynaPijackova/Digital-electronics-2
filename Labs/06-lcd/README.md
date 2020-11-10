@@ -3,7 +3,7 @@
    | RS | PB0 | Register selection signal. Selection between Instruction register (RS=0) and Data register (RS=1) |
    | R/W | GND | Read/Write, GDN for enabled writing |
    | E | PB1 | Enable signal into HD44780 |
-   | D[3:0] | N/A| 8-bit data D[7:0] |
+   | D[3:0] | N/A| 8-bit data (for D[7:0]) |
    | D[7:4] | PD[4:7] | 4-bit data |
 
 
