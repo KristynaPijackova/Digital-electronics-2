@@ -32,12 +32,11 @@ LIBRARY_DIR = ../library
 # existing files that match the pattern.
 SRCS := $(wildcard *.c)
 # Add or comment libraries you are using in the project
-#SRCS += $(LIBRARY_DIR)/lcd.c
-#SRCS += $(LIBRARY_DIR)/uart.c
-#SRCS += $(LIBRARY_DIR)/twi.c
 SRCS += $(LIBRARY_DIR)/lcd.c
-SRCS += $(LIBRARY_DIR)/gpio.c
-SRCS += $(LIBRARY_DIR)/segment.c
+SRCS += $(LIBRARY_DIR)/uart.c
+#SRCS += $(LIBRARY_DIR)/twi.c
+#SRCS += $(LIBRARY_DIR)/gpio.c
+#SRCS += $(LIBRARY_DIR)/segment.c
 ASSRC := $(wildcard *.S)
 
 
