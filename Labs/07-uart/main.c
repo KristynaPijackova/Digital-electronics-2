@@ -24,9 +24,9 @@ int f_parity(uint16_t val);
 
 // Function to get parity of number n. 
 // It returns 1 if n has odd parity, and returns 0 if n has even parity 
-int f_parity(uint16_t val)
+uint16_t f_parity(uint16_t val)
 {
-    uint8_t par = 0;
+    uint16_t par = 0;
     while(val)
     {
         par = ~par;
