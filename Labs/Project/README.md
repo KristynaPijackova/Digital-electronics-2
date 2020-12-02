@@ -1,5 +1,6 @@
 <h1> Project DE-2 </h1>
-Authors:  Kristýna Pijáčková; [Filip Paul] (../FilipPaul/Digital-Electronics-2/tree/master/labs/project)
+
+Authors:  Kristýna Pijáčková; [Filip Paul](https://github.com/FilipPaul/Digital-Electronics-2/tree/master/labs/project)
 
 <h2> Project objectives </h2>
 <p>Application of analog signal generator using 8-bit R-2R DAC with several preset signal types. User interface: 4x3 keypad control, 2x16 LCD, UART.</p>
