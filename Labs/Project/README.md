@@ -41,6 +41,7 @@ The generator is realized in the main.c file using counter frequency 7812Hz give
 
 <h2> Schematics and diagram </h2>
 
+<img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/Screenshot_20201215_195629.png">
 <img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/Diagramm_DE2.png">
 
 <h2> Results discussion </h2>
@@ -55,4 +56,4 @@ The generator is realized in the main.c file using counter frequency 7812Hz give
  
 
 <h3> Simulation </h3>
- <img src = "https://github.com/FilipPaul/Digital-Electronics-2/blob/master/labs/project/pictures/UIsimulation.gif">
+ <img src = "https://github.com/FilipPaul/Digital-Electronics-2/blob/master/labs/project/pictures/finalGIF.gif">
