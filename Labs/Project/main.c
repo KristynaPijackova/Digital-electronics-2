@@ -1,5 +1,5 @@
 /***********************************************************************
- * 
+ * Signal Generator
  * Analog-to-digital conversion with displaying result on LCD and 
  * transmitting via UART.
  * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
@@ -292,6 +292,13 @@ ISR(TIMER1_OVF_vect)
   pre_pos = pos; // to avoid multiple press
 } //ISR
 
+
+/***********************************************************************
+ * 
+ * Part for generating signals with three included waveforms - sine,
+ * square and ramp with possible frequency range 15Hz to 1000Hz.
+ * 
+ **********************************************************************/
 
 // timer 0 is used as frequency counter for the signal generator
 
