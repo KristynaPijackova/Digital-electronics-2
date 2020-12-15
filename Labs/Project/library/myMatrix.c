@@ -14,7 +14,7 @@
 uint8_t columns[4] = {Col_1,Col_2,Col_3,Col_4};
 uint8_t rows[3] = {row_3,row_2,row_1};
 const char* buttons_look_up[13]= {"1","2","3","4","5","6","7","8","9","shift","0","onoff"};
-const char* shift_buttons_look_up[13]= {"freq","sine","ramp","Hz","kHz","MHz","7","8","9","shift","0","onoff"};
+const char* shift_buttons_look_up[13]= {"freq","sine","ramp","Hz","kHz","MHz","sqre","tria","9","shift","0","onoff"};
 
 
 void initMatrix(){
@@ -44,7 +44,7 @@ uint8_t scanMatrix(){ //returns int like 14 --> row 1, column 4
         //set row to LOW and scan through collumns
         GPIO_toggle(&MATRIX_PORT, rows[i]); // set row pin LOW
         for (size_t k = 0; k < 4; k++) // scan through all columns
-        { _delay_us(20); // needed for its functionality
+        { //_delay_us(5); // needed for Simul IDE crap
             if (GPIO_read(&PINC, columns[k]) == 0)
             {
                 pos_row = i+1;
@@ -70,7 +70,7 @@ uint8_t scanMatrix(){ //returns int like 14 --> row 1, column 4
 }//void
 
 
-const char* posToConstChar(uint8_t pos, uint8_t shift){
+const char* posToConstChar(uint8_t pos, bool shift){
     const char* button_name;
     switch (pos)
     {
@@ -93,7 +93,7 @@ const char* posToConstChar(uint8_t pos, uint8_t shift){
         button_name = shiftFun(5,shift);// 6 or MHz
         break;         
     case 13:
-        button_name = shiftFun(6,shift);
+        button_name = shiftFun(6,shift);// 7 or sqr
         break; 
     case 23:
         button_name = shiftFun(7,shift);
@@ -121,8 +121,8 @@ const char* posToConstChar(uint8_t pos, uint8_t shift){
     return button_name;
 }
 
-
-const char* shiftFun(uint8_t number, uint8_t shift){
+// this function returns correct name according to shift state
+const char* shiftFun(uint8_t number, bool shift){
     const char* button_name;
     if (shift == 0)
     {
