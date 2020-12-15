@@ -9,6 +9,8 @@
  * This work is licensed under the terms of the MIT license.
  * 
  **********************************************************************/
+//DE 2 Project
+//Authors: Kristýna Pijáčková, Filip Paul
 
 /* Includes ----------------------------------------------------------*/
 #include <avr/io.h>        // AVR device-specific IO definitions
@@ -18,10 +20,14 @@
 #include <stdlib.h>        // C library. Needed for conversion function
 #include "uart.h"          // Peter Fleury's UART library
 #include <myMatrix.h>      // library for matrix scanning
-#include "gpio.h"
-#include <util/delay.h> 
-#include <stdio.h>
-#include <string.h>
+#include "gpio.h"          // library written in DE2 labs 
+#include <util/delay.h>    // for delays - was used for debuging, because simulIDE need some delays
+#include <stdio.h>         // AVR device-specific IO definitions
+#include <string.h>        // library for strcmp function
+
+#ifndef F_CPU
+#define F_CPU 16000000
+#endif
 
 #define DAC_0        PB0     // AVR pin where DAC is connected
 #define DAC_1        PB1     // AVR pin where DAC is connected
@@ -127,7 +133,7 @@ int main(void)
   lcd_command(1 << LCD_DDRAM);
 
   // Initialize UART to asynchronous, 8N1, 9600
-  uart_init(UART_BAUD_SELECT(9600, F_CPU));
+  //uart_init(UART_BAUD_SELECT(9600, F_CPU)); with uart SIMUL IDE freezing.. therefor all Uarts are commented
   // set timer for scanning
   TIM1_overflow_33ms();
   TIM1_overflow_interrupt_enable();
@@ -157,6 +163,7 @@ ISR(TIMER1_OVF_vect)
   static const char *button_name = ""; // button Name
   static uint8_t input_counter = 0;
   static bool im_in_freq = 0;
+  //char uart_string[2] = "";     //variable for updating strings to UART
 
   pos = scanMatrix();                       // get position in form of int ex:23 row 2, column 3
   button_name = posToConstChar(pos, shift); //grt name of button in form of const char* from position
@@ -193,7 +200,7 @@ ISR(TIMER1_OVF_vect)
     {
       im_in_freq = 1; // variable to detect, that frequency isn't already selected
     }
-    else if(strcmp(button_name , "onoff")==0)
+    else if(strcmp(button_name , "onoff")==0) // on/off
     {
       status = !status;
       if (status == 1)
@@ -202,23 +209,26 @@ ISR(TIMER1_OVF_vect)
         lcd_puts("   ");
         lcd_gotoxy(13, 0);
         lcd_puts("on");
+      // uart_puts("status: on \n");
       }
       if (status == 0)
       {
         lcd_gotoxy(13, 0);
         lcd_puts("off");
+      // uart_puts("status: off \n");
       }
       
     }
-
+    // uploading the waveform name
     else if((strcmp(button_name , "sine")==0) || (strcmp(button_name , "ramp")==0)|| (strcmp(button_name , "sqre")==0) || (strcmp(button_name , "tria")==0)){
       waveform = button_name;
         lcd_gotoxy(8, 0);
         lcd_puts(waveform);
+      //  uart_puts("waveform: ");
+      //  uart_puts(waveform);
+      //  uart_puts("\n");
     }
     
-
-
     if (im_in_freq == 1)
     {
       if (input_counter == 0) // wait for input ("freq" on display)
@@ -227,6 +237,9 @@ ISR(TIMER1_OVF_vect)
         lcd_puts("        ");
         lcd_gotoxy(8, 1);
         lcd_puts(button_name);
+       // uart_puts("pressed button: ");
+       // uart_puts(button_name);
+       // uart_puts("\n");
         //_delay_us(2); needed for Simul IDE crap
         input_counter++;
       }
@@ -257,7 +270,11 @@ ISR(TIMER1_OVF_vect)
           frequency = 1000 * digits[0] + 100 * digits[1] + 10 * digits[2] + digits[3];
           lcd_gotoxy(7 + input_counter, 1);
           lcd_puts(" Hz");
-          uart_puts("frequency: ");
+          //itoa(frequency, uart_string, 10);
+          // uart_puts("frequency: ");
+          // uart_puts(uart_string);
+          // uart_puts(Hz);
+          // uart_puts("\n");
           input_counter = 0;
           im_in_freq = 0;
           break;
@@ -267,6 +284,11 @@ ISR(TIMER1_OVF_vect)
           frequency = 1000 * digits[0] + 100 * digits[1] + 10 * digits[2] + digits[3];
           lcd_gotoxy(7 + input_counter, 1);
           lcd_puts(" kHz");
+          //itoa(frequency, uart_string, 10);
+          // uart_puts("frequency: ");
+          // uart_puts(uart_string);
+          // uart_puts(kHz);
+          // uart_puts("\n");
           input_counter = 0;
           im_in_freq = 0;
           break;
@@ -276,6 +298,12 @@ ISR(TIMER1_OVF_vect)
           frequency = 1000 * digits[0] + 100 * digits[1] + 10 * digits[2] + digits[3];
           lcd_gotoxy(7 + input_counter, 1);
           lcd_puts(" MHz");
+          //itoa(frequency, uart_string, 10);
+          // uart_puts("frequency: ");
+          // uart_puts(uart_string);
+          // uart_puts(MHz);
+          // uart_puts("\n");
+          
           input_counter = 0;
           im_in_freq = 0;
           break;
