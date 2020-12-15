@@ -7,7 +7,7 @@ Authors:  Kristýna Pijáčková; [Filip Paul](https://github.com/FilipPaul/Digi
 <h2> Hardware description </h3>
 <p>The brain of the generator is the 8-bit microcontroller Atmega238p. This MCU is soldered with few more components (voltage regulators, 16MHz oscillator, USB interface etc.) on the premade board called Arduino Uno. ATMEGA 328p has 21 GPIO pins. These pins can be accessed by registers PORTB, PORTC and PORTD. In our case we will use PORTD pins to control LCD with Hitachi HD44780 driver, PORTB as input to 8-bit R-2R DAC and PORTC to scan 4x3 keypad matrix </p>
 <h3>R-2R 8-bit DAC</h3>
-nějaký fešný obrázek zde...
+<img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/8bit.png">
 <p>R-2R is basically a voltage divider created from resistors of 2 values. The output of this DAC is given by the following equation</p>
 nějaká pěkná rovnice zde
 
