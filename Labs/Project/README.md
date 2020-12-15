@@ -1,6 +1,6 @@
 <h1> Project DE-2 </h1>
 
-Authors:  Kristýna Pijáčková; [Filip Paul](https://github.com/FilipPaul/Digital-Electronics-2/tree/master/labs/project)
+Authors:  [Kristýna Pijáčková](https://github.com/KristynaPijackova/Digital-electronics-2/tree/master/Labs/Project) ; [Filip Paul](https://github.com/FilipPaul/Digital-Electronics-2/tree/master/labs/project)
 
 <h2> Project description </h2>
 <p>Function description R-2R ladder Digital to Analog Converter (DAC). Application of analog signal generator using at least 8-bit DAC; several preset signal types; display; 4x3 keypad control; (possibility of DTMF, Dual-Tone Multiple Frequencies tone generation); sending interesting information about the status of the application to the UART.</p>
@@ -41,7 +41,7 @@ The generator is realized in the main.c file using counter frequency 7812Hz give
 
 <h2> Schematics and diagram </h2>
 
-
+<img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/Diagramm_DE2.png">
 
 <h2> Results discussion </h2>
 
