@@ -404,6 +404,6 @@ ISR(TIMER0_OVF_vect)
 //                 help_counter = 512;
 //                 counter = 0;
 //             }
-        }
+//        }
     }
 }
