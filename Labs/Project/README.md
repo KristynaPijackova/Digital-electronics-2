@@ -33,7 +33,8 @@ For purpose of controlling the 4x3 matrix, we have written a library called "myM
 | `scanMatrix()`   | none | uint8_t pos |returns position in form of integer of pushed button EX: 23 -> row 2 x column 3; returns 0 if nothing was pressed|
 | `posToConstChar(uint8_t pos, bool shift)` |  `uint8_t pos` `bool shift` | `const char* button_name` |returns button name according to the position and also takes into account if shift button was pressed |
 
-To scan matrix. function scanMatrix() is called in regular interval given by Timer1 overflow each 33ms. The display, UART and parameters like frequency, output status and waveform are then updated according to the pushed button.
+To scan matrix. function scanMatrix() is called in regular interval given by Timer1 overflow each 33ms. The display, UART and parameters like frequency, output status and waveform are then updated according to the pushed button. </br>
+<i>Please note: for UART transmission it is necessary to uncomment the relevant lines, because with UART simul IDE sometimes crashes unexpectedly.</i>
 
 <h3> Waveform generator </h3>
 
@@ -41,7 +42,7 @@ The generator is realized in the main.c file using counter frequency 7812Hz give
 
 <h2> Schematics and diagram </h2>
 
-<img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/Screenshot_20201215_195629.png">
+<img src = "https://github.com/FilipPaul/Digital-Electronics-2/blob/master/labs/project/pictures/simulace.PNG">
 <img src = "https://github.com/KristynaPijackova/Digital-electronics-2/blob/master/Images/Diagramm_DE2.png">
 
 <h2> Results discussion </h2>
